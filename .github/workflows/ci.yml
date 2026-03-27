@@ -107,7 +107,7 @@ jobs:
         run: docker build -t cicd-exercice:${{ github.sha }} app/
 
       - name: Scanner l'image Docker pour les vulnérabilités (Trivy)
-        uses: aquasecurity/trivy-action@0.20.0
+        uses: aquasecurity/trivy-action@0.28.0
         with:
           image-ref: cicd-exercice:${{ github.sha }}
           format: 'table'
